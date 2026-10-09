@@ -1727,7 +1727,7 @@ def dot(*arrays, dims=None, **kwargs):
     return result.transpose(*all_dims, missing_dims="ignore")
 
 
-def where(cond, x, y):
+def where(cond, x, y, keep_attrs=None):
     """Return elements from `x` or `y` depending on `cond`.
 
     Performs xarray-like broadcasting across input arguments.
@@ -1743,6 +1743,11 @@ def where(cond, x, y):
         values to choose from where `cond` is True
     y : scalar, array, Variable, DataArray or Dataset
         values to choose from where `cond` is False
+    keep_attrs : bool or str, optional
+        If True, attributes from ``x`` are copied to the result. If False,
+        attributes are dropped. If None, falls back to ``keep_attrs`` from
+        the global ``xarray.set_options`` setting (default: False). Non-boolean
+        values are passed through to :func:`apply_ufunc`.
 
     Returns
     -------
@@ -1808,8 +1813,13 @@ def where(cond, x, y):
     Dataset.where, DataArray.where :
         equivalent methods
     """
-    # alignment for three arguments is complicated, so don't support it yet
-    return apply_ufunc(
+    if keep_attrs is None:
+        keep_attrs = _get_keep_attrs(default=False)
+
+    # apply_ufunc's keep_attrs=True/"override" would copy attrs from `cond`
+    # (the first argument). Users expect attrs from `x`, matching
+    # DataArray.where / Dataset.where. Handle that case explicitly.
+    result = apply_ufunc(
         duck_array_ops.where,
         cond,
         x,
@@ -1817,7 +1827,17 @@ def where(cond, x, y):
         join="exact",
         dataset_join="exact",
         dask="allowed",
+        keep_attrs=keep_attrs if keep_attrs is not True else False,
     )
+
+    # keep attributes from x, i.e. the second argument / "then" values
+    if keep_attrs is True:
+        try:
+            result.attrs = dict(x.attrs)
+        except AttributeError:
+            pass
+
+    return result
 
 
 def polyval(coord, coeffs, degree_dim="degree"):
