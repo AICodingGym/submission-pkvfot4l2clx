@@ -1,0 +1,92 @@
+{
+  "model": "forward_lstm",
+  "bidirectional": false,
+  "change": "replace the row-wise tree with a forward LSTM over the 80 steps; raw columns only",
+  "features": [
+    "u_in",
+    "u_out",
+    "time_step",
+    "R",
+    "C"
+  ],
+  "hidden_size": 128,
+  "layers": 1,
+  "epochs": 10,
+  "batch_size": 512,
+  "learning_rate": 0.001,
+  "loss": "L1 where u_out == 0",
+  "feature_mean": [
+    7.328926086425781,
+    0.6204226016998291,
+    1.3070664405822754,
+    27.01430320739746,
+    26.066194534301758
+  ],
+  "feature_std": [
+    13.44269847869873,
+    0.4852798581123352,
+    0.7658920288085938,
+    19.60381317138672,
+    17.139692306518555
+  ],
+  "previous_val_mae": 1.2675111937941614,
+  "val_mae": 1.5831831996107766,
+  "train_mae": 1.5487950759961389,
+  "mae_change": 0.31567200581661514,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mae": 10.05030747765726,
+      "val_mae": 6.835273542430164
+    },
+    {
+      "epoch": 2,
+      "train_mae": 5.7770037022035625,
+      "val_mae": 4.238129231917708
+    },
+    {
+      "epoch": 3,
+      "train_mae": 3.349664558101563,
+      "val_mae": 2.7265125283323512
+    },
+    {
+      "epoch": 4,
+      "train_mae": 2.4837715926117974,
+      "val_mae": 2.4992700883299452
+    },
+    {
+      "epoch": 5,
+      "train_mae": 2.2048304068017583,
+      "val_mae": 2.0881045578871937
+    },
+    {
+      "epoch": 6,
+      "train_mae": 2.009107515654098,
+      "val_mae": 1.9870656412906835
+    },
+    {
+      "epoch": 7,
+      "train_mae": 1.8915452870198286,
+      "val_mae": 1.7802832119979877
+    },
+    {
+      "epoch": 8,
+      "train_mae": 1.733138415871537,
+      "val_mae": 1.7545588258243332
+    },
+    {
+      "epoch": 9,
+      "train_mae": 1.6454419379703564,
+      "val_mae": 1.7211756422021842
+    },
+    {
+      "epoch": 10,
+      "train_mae": 1.5487950759961389,
+      "val_mae": 1.5831831996107766
+    }
+  ],
+  "device": "cuda",
+  "runtime_seconds": 21.3,
+  "n_train_breaths": 54324,
+  "n_val_breaths": 13581
+}

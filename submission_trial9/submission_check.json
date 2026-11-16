@@ -1,0 +1,21 @@
+{
+  "model": "trial 9 bidirectional LSTM, 4 layers, hidden 256",
+  "weights": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\experiments\\bilstm_4x256_features.pt",
+  "checkpoint_best_epoch": 197,
+  "checkpoint_best_val_mae": 0.24449364977244953,
+  "recomputed_val_mae": 0.24449364977244953,
+  "val_mae_by_R": {
+    "5.0": 0.16934064030647278,
+    "20.0": 0.22460147738456726,
+    "50.0": 0.3182763457298279
+  },
+  "val_mae_by_C": {
+    "10.0": 0.24414031207561493,
+    "20.0": 0.23868626356124878,
+    "50.0": 0.2502802610397339
+  },
+  "n_test_rows": 603600,
+  "pressure_min": -1.6759142875671387,
+  "pressure_max": 64.84992218017578,
+  "submission": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\submission_trial9\\submission.csv"
+}

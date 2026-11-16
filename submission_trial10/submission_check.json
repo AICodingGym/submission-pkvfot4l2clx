@@ -1,0 +1,21 @@
+{
+  "model": "trial 10 bidirectional LSTM, resumed from trial 9, R=50 loss doubled",
+  "weights": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\experiments\\bilstm_4x256_r50.pt",
+  "checkpoint_best_epoch": 196,
+  "checkpoint_best_val_mae": 0.22224515897219077,
+  "recomputed_val_mae": 0.22224515897219077,
+  "val_mae_by_R": {
+    "5.0": 0.1587354838848114,
+    "20.0": 0.20856378972530365,
+    "50.0": 0.28249847888946533
+  },
+  "val_mae_by_C": {
+    "10.0": 0.22209863364696503,
+    "20.0": 0.2187446653842926,
+    "50.0": 0.22565752267837524
+  },
+  "n_test_rows": 603600,
+  "pressure_min": -1.2533237934112549,
+  "pressure_max": 64.83660125732422,
+  "submission": "submission_trial10\\submission.csv"
+}

@@ -1,0 +1,20 @@
+{
+  "model": "lightgbm",
+  "features": [
+    "R",
+    "C",
+    "time_step",
+    "u_in",
+    "u_out"
+  ],
+  "n_estimators": 200,
+  "learning_rate": 0.1,
+  "num_leaves": 63,
+  "objective": "regression_l1",
+  "constant_inspiratory_pressure": 17.59491928919946,
+  "constant_val_mae": 7.594128819992182,
+  "val_mae": 3.998002671200387,
+  "runtime_seconds": 21.1,
+  "n_train_rows": 4345920,
+  "n_val_rows": 1086480
+}

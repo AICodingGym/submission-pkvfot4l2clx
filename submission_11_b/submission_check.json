@@ -1,0 +1,19 @@
+{
+  "model": "average of the trial 11 stitch and model B",
+  "recomputed_val_mae": 0.21776806769890206,
+  "trial11_val_mae": 0.21992300559001868,
+  "val_mae_by_R": {
+    "5.0": 0.15535742044448853,
+    "20.0": 0.20386368036270142,
+    "50.0": 0.2772870659828186
+  },
+  "val_mae_by_C": {
+    "10.0": 0.2190134972333908,
+    "20.0": 0.20939901471138,
+    "50.0": 0.22411151230335236
+  },
+  "n_test_rows": 603600,
+  "pressure_min": -1.331348180770874,
+  "pressure_max": 64.83795928955078,
+  "submission": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\submission_11_b\\submission.csv"
+}

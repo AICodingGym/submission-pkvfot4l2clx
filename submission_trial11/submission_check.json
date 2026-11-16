@@ -1,0 +1,23 @@
+{
+  "model": "trial 11 R=50 specialist stitched into trial 10",
+  "trial10_weights": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\experiments\\bilstm_4x256_r50.pt",
+  "specialist_weights": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\experiments\\bilstm_r50_specialist.pt",
+  "specialist_best_epoch": 169,
+  "checkpoint_best_stitched_val_mae": 0.21992300559001868,
+  "recomputed_val_mae": 0.21992300559001868,
+  "trial10_val_mae": 0.22224515897219077,
+  "val_mae_by_R": {
+    "5.0": 0.1587354838848114,
+    "20.0": 0.20856378972530365,
+    "50.0": 0.27675139904022217
+  },
+  "val_mae_by_C": {
+    "10.0": 0.21842417120933533,
+    "20.0": 0.21669787168502808,
+    "50.0": 0.2246181219816208
+  },
+  "n_test_rows": 603600,
+  "pressure_min": -1.2207707166671753,
+  "pressure_max": 64.84181213378906,
+  "submission": "C:\\Users\\loren\\OneDrive\\Desktop\\Fall 26-27\\DSC 102\\PA03\\ventilator-pressure-prediction\\submission_trial11\\submission.csv"
+}

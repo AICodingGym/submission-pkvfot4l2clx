@@ -1,0 +1,49 @@
+{
+  "model": "lightgbm",
+  "change": "extend u_in lags from 1-3 to 1-20 and add the one-step change u_in_diff1",
+  "previous_val_mae": 1.3745848510811398,
+  "val_mae": 1.2675111937941614,
+  "mae_change": -0.10707365728697837,
+  "val_mae_by_R": {
+    "5": 0.7728,
+    "20": 1.2207,
+    "50": 1.6968
+  },
+  "val_mae_by_C": {
+    "10": 1.5768,
+    "20": 1.1968,
+    "50": 0.9813
+  },
+  "feature_importance_split": {
+    "u_in_cumsum": 1779,
+    "time_step": 1775,
+    "R": 1176,
+    "C": 1140,
+    "step": 841,
+    "u_in_lag2": 710,
+    "u_in_lag1": 671,
+    "u_in_diff1": 648,
+    "u_in": 492,
+    "u_in_lag3": 454,
+    "u_in_lag4": 339,
+    "u_in_lag5": 243,
+    "u_in_lag7": 228,
+    "u_in_lag6": 222,
+    "u_in_lag20": 203,
+    "u_in_lag8": 184,
+    "u_in_lag9": 164,
+    "u_in_lag10": 146,
+    "u_in_lag11": 145,
+    "u_in_lag12": 134,
+    "u_in_lag19": 121,
+    "u_in_lag14": 114,
+    "u_in_lag18": 108,
+    "u_in_lag13": 100,
+    "u_in_lag17": 95,
+    "u_in_lag16": 83,
+    "u_in_lag15": 82,
+    "u_out": 3
+  },
+  "n_estimators": 200,
+  "runtime_seconds": 37.2
+}

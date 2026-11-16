@@ -1,0 +1,29 @@
+{
+  "individual": {
+    "trial11": {
+      "val_mae": 0.21992300559001868,
+      "hard_val_mae": 0.3121221363544464
+    },
+    "model_b": {
+      "val_mae": 0.2502586392235464,
+      "hard_val_mae": 0.36242029070854187
+    },
+    "model_c": {
+      "val_mae": 0.2827979981596185,
+      "hard_val_mae": 0.37374019622802734
+    }
+  },
+  "median_11_b_c": {
+    "val_mae": 0.2211587225738404,
+    "hard_val_mae": 0.3147467076778412
+  },
+  "median_11_b": {
+    "val_mae": 0.21776806769890206,
+    "hard_val_mae": 0.3142456114292145
+  },
+  "hard_residual_correlation": {
+    "trial11_model_b": 0.6850478369874847,
+    "trial11_model_c": 0.7079873476928985,
+    "model_b_model_c": 0.7161226040754664
+  }
+}
